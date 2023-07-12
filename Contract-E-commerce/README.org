@@ -1,0 +1,277 @@
+#+TITLE: Started Template - Near Smartcontract
+#+AUTHOR: Dang Quang Vu
+#+EMAIL: eamondang@gmail.com
+#+SETUPFILE: ~/theme-readtheorg.setup
+#+HTML_HEAD: <style>pre.src{background:#343131;color:white;} </style>
+
++ Quickly build apps backed by the NEAR blockchain
++ Prerequisites
+
+* Init
+#+begin_src sh :results output
+cargo make call-self init
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[cargo-make] INFO - cargo make 0.36.11
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Project: contract
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: call-self
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: legacy-migration
+[cargo-make] INFO - Running Task: call-self
+[cargo-make] INFO - Execute Command: "/usr/bin/env" "zsh" "/var/folders/vp/83kwd_3n3dx6mrj_d3n54wsm0000gn/T/fsio_p6bTGBRo5D.sh" "init"
+Scheduling a call: dev-1689165708941-20277725844724.init()
+Doing account.functionCall()
+Transaction Id HeY4wJfNSYSeHndTKbsBfMNpKjW6rtpQtt1LjJ9zX9VL
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/HeY4wJfNSYSeHndTKbsBfMNpKjW6rtpQtt1LjJ9zX9VL
+''
+[cargo-make] INFO - Build Done in 11.67 seconds.
+#+end_example
+
+* New Shop
+#+begin_src sh :results output
+cargo make call new_shop '{"name" : "eamon shop", "desc": "shop danh cho nguoi that tinh"}' --account-id eamondev.testnet
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[cargo-make] INFO - cargo make 0.36.11
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Project: contract
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: call
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: legacy-migration
+[cargo-make] INFO - Running Task: call
+[cargo-make] INFO - Execute Command: "/usr/bin/env" "zsh" "/var/folders/vp/83kwd_3n3dx6mrj_d3n54wsm0000gn/T/fsio_5J7yMAcJxM.sh" "new_shop" "{\"name\" : \"eamon shop\", \"desc\": \"shop danh cho nguoi that tinh\"}" "--account-id" "eamondev.testnet"
+Scheduling a call: dev-1689165708941-20277725844724.new_shop({"name" : "eamon shop", "desc": "shop danh cho nguoi that tinh"})
+Doing account.functionCall()
+Transaction Id AB9Aa2P6pfERNkHtsvMqtQWQMY6n39CgZcT26hAi91Dh
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/AB9Aa2P6pfERNkHtsvMqtQWQMY6n39CgZcT26hAi91Dh
+{
+  owner: 'eamondev.testnet',
+  name: 'eamon shop',
+  desc: 'shop danh cho nguoi that tinh',
+  total_product: 0
+}
+[cargo-make] INFO - Build Done in 11.63 seconds.
+#+end_example
+
+* Get all shops
+#+begin_src sh :results output
+cargo make view get_all_shops
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[cargo-make] INFO - cargo make 0.36.11
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Project: contract
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: view
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: legacy-migration
+[cargo-make] INFO - Running Task: view
+[cargo-make] INFO - Execute Command: "/usr/bin/env" "zsh" "/var/folders/vp/83kwd_3n3dx6mrj_d3n54wsm0000gn/T/fsio_bo558TI8RR.sh" "get_all_shops"
+View call: dev-1689165708941-20277725844724.get_all_shops()
+[
+  {
+    owner: 'eamondev.testnet',
+    name: 'eamon shop',
+    desc: 'shop danh cho nguoi that tinh',
+    total_product: 0
+  }
+]
+[cargo-make] INFO - Build Done in 11.63 seconds.
+#+end_example
+
+* Get Shop by Id
+#+begin_src sh :results output
+cargo make view get_shop_by_id '{"name": "eamondev.testnet"}'
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[cargo-make] INFO - cargo make 0.36.11
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Project: contract
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: view
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: legacy-migration
+[cargo-make] INFO - Running Task: view
+[cargo-make] INFO - Execute Command: "/usr/bin/env" "zsh" "/var/folders/vp/83kwd_3n3dx6mrj_d3n54wsm0000gn/T/fsio_mDiHZA71mJ.sh" "get_shop_by_id" "{\"name\": \"eamondev.testnet\"}"
+View call: dev-1689165708941-20277725844724.get_shop_by_id({"name": "eamondev.testnet"})
+{
+  owner: 'eamondev.testnet',
+  name: 'eamon shop',
+  desc: 'shop danh cho nguoi that tinh',
+  total_product: 0
+}
+[cargo-make] INFO - Build Done in 11.64 seconds.
+#+end_example
+
+* New Product
+#+begin_src sh :results output
+cargo make call new_product '{"product_id": "quan-3lo-01", "name" : "quan 3 lo sieu ben", "total_supply": 100, "price": 200, "desc" : "mo ta cua cai quan 3 lo ne"}' --account-id eamondev.testnet
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[cargo-make] INFO - cargo make 0.36.11
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Project: contract
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: call
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: legacy-migration
+[cargo-make] INFO - Running Task: call
+[cargo-make] INFO - Execute Command: "/usr/bin/env" "zsh" "/var/folders/vp/83kwd_3n3dx6mrj_d3n54wsm0000gn/T/fsio_pRYGDXIMxa.sh" "new_product" "{\"product_id\": \"quan-3lo-01\", \"name\" : \"quan 3 lo sieu ben\", \"total_supply\": 100, \"price\": 200, \"desc\" : \"mo ta cua cai quan 3 lo ne\"}" "--account-id" "eamondev.testnet"
+Scheduling a call: dev-1689165708941-20277725844724.new_product({"product_id": "quan-3lo-01", "name" : "quan 3 lo sieu ben", "total_supply": 100, "price": 200, "desc" : "mo ta cua cai quan 3 lo ne"})
+Doing account.functionCall()
+Transaction Id Cfx4jCTPxvgBZtT2bb3njs8dQap7nAPJ5ckE7Y2gcudK
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/Cfx4jCTPxvgBZtT2bb3njs8dQap7nAPJ5ckE7Y2gcudK
+{
+  product_id: 'quan-3lo-01',
+  name: 'quan 3 lo sieu ben',
+  total_supply: 100,
+  price: 200,
+  desc: 'mo ta cua cai quan 3 lo ne',
+  owner: 'eamondev.testnet'
+}
+[cargo-make] INFO - Build Done in 11.77 seconds.
+#+end_example
+* get all products
+#+begin_src sh :results output
+cargo make view get_all_products
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[cargo-make] INFO - cargo make 0.36.11
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Project: contract
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: view
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: legacy-migration
+[cargo-make] INFO - Running Task: view
+[cargo-make] INFO - Execute Command: "/usr/bin/env" "zsh" "/var/folders/vp/83kwd_3n3dx6mrj_d3n54wsm0000gn/T/fsio_WoVFb3RdqI.sh" "get_all_products"
+View call: dev-1689165708941-20277725844724.get_all_products()
+[
+  {
+    product_id: 'quan-3lo-01',
+    name: 'quan 3 lo sieu ben',
+    total_supply: 100,
+    price: 200,
+    desc: 'mo ta cua cai quan 3 lo ne',
+    owner: 'eamondev.testnet'
+  }
+]
+[cargo-make] INFO - Build Done in 12.03 seconds.
+#+end_example
+* Get product by id
+#+begin_src sh :results output
+cargo make view get_product_by_id '{"product_id" : "quan-3lo-01"}'
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[cargo-make] INFO - cargo make 0.36.11
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Project: contract
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: view
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: legacy-migration
+[cargo-make] INFO - Running Task: view
+[cargo-make] INFO - Execute Command: "/usr/bin/env" "zsh" "/var/folders/vp/83kwd_3n3dx6mrj_d3n54wsm0000gn/T/fsio_thqwgwO59O.sh" "get_product_by_id" "{\"product_id\" : \"quan-3lo-01\"}"
+View call: dev-1689165708941-20277725844724.get_product_by_id({"product_id" : "quan-3lo-01"})
+{
+  product_id: 'quan-3lo-01',
+  name: 'quan 3 lo sieu ben',
+  total_supply: 100,
+  price: 1,
+  desc: 'mo ta cua cai quan 3 lo ne',
+  owner: 'eamondev.testnet'
+}
+[cargo-make] INFO - Build Done in 12.06 seconds.
+#+end_example
+
+* Get product per shop
+#+begin_src sh :results output
+cargo make view get_products_by_owner '{"owner" : "eamondev.testnet"}'
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[cargo-make] INFO - cargo make 0.36.11
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Project: contract
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: view
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: legacy-migration
+[cargo-make] INFO - Running Task: view
+[cargo-make] INFO - Execute Command: "/usr/bin/env" "zsh" "/var/folders/vp/83kwd_3n3dx6mrj_d3n54wsm0000gn/T/fsio_vxvzziQ2e7.sh" "get_products_by_owner" "{\"owner\" : \"eamondev.testnet\"}"
+View call: dev-1689165708941-20277725844724.get_products_by_owner({"owner" : "eamondev.testnet"})
+[
+  {
+    product_id: 'quan-3lo-01',
+    name: 'quan 3 lo sieu ben',
+    total_supply: 100,
+    price: 200,
+    desc: 'mo ta cua cai quan 3 lo ne',
+    owner: 'eamondev.testnet'
+  }
+]
+[cargo-make] INFO - Build Done in 11.82 seconds.
+#+end_example
+
+
+* Update Product
+#+begin_src sh :results output
+cargo make call update_product '{"product_id" : "quan-3lo-01", "price" : 1}' --account-id eamondev.testnet
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[cargo-make] INFO - cargo make 0.36.11
+[cargo-make] INFO - Calling cargo metadata to extract project info
+[cargo-make] INFO - Cargo metadata done
+[cargo-make] INFO - Project: contract
+[cargo-make] INFO - Build File: Makefile.toml
+[cargo-make] INFO - Task: call
+[cargo-make] INFO - Profile: development
+[cargo-make] INFO - Running Task: legacy-migration
+[cargo-make] INFO - Running Task: call
+[cargo-make] INFO - Execute Command: "/usr/bin/env" "zsh" "/var/folders/vp/83kwd_3n3dx6mrj_d3n54wsm0000gn/T/fsio_NIQEk83Ymj.sh" "update_product" "{\"product_id\" : \"quan-3lo-01\", \"price\" : 1}" "--account-id" "eamondev.testnet"
+Scheduling a call: dev-1689165708941-20277725844724.update_product({"product_id" : "quan-3lo-01", "price" : 1})
+Doing account.functionCall()
+Transaction Id 2uNy9SKFbCGqp6WBhiKm6Zf1HMupsrrjXJ7BgwMsXCTB
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/2uNy9SKFbCGqp6WBhiKm6Zf1HMupsrrjXJ7BgwMsXCTB
+{
+  product_id: 'quan-3lo-01',
+  name: 'quan 3 lo sieu ben',
+  total_supply: 100,
+  price: 1,
+  desc: 'mo ta cua cai quan 3 lo ne',
+  owner: 'eamondev.testnet'
+}
+[cargo-make] INFO - Build Done in 11.59 seconds.
+#+end_example
