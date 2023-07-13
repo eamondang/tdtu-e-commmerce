@@ -23,3 +23,5 @@ panic = "abort"
 
 [dependencies]
 near-sdk = "4.1.1"
+
+
