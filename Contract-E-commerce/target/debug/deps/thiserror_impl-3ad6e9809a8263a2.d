@@ -1,0 +1,12 @@
+/home/ha/blockchain/tdtu-e-commmerce/Contract-E-commerce/target/debug/deps/libthiserror_impl-3ad6e9809a8263a2.so: /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/lib.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/ast.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/attr.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/expand.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/fmt.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/generics.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/prop.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/valid.rs
+
+/home/ha/blockchain/tdtu-e-commmerce/Contract-E-commerce/target/debug/deps/thiserror_impl-3ad6e9809a8263a2.d: /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/lib.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/ast.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/attr.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/expand.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/fmt.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/generics.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/prop.rs /home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/valid.rs
+
+/home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/lib.rs:
+/home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/ast.rs:
+/home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/attr.rs:
+/home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/expand.rs:
+/home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/fmt.rs:
+/home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/generics.rs:
+/home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/prop.rs:
+/home/ha/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.41/src/valid.rs:
