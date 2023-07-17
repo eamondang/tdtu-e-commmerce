@@ -69,7 +69,14 @@ pub trait OutSourcing {
   // Freelancer -> Take.
   fn take_job(&mut self, job_id: JobId) -> Job;
   // Update
-  fn update_job(&mut self, id: JobId, name: String, desc: String, salary: Balance, exp: String);
+  fn update_job(
+    &mut self,
+    id: JobId, 
+    name: Option<String>, 
+    desc: Option<String>, 
+    salary: Option<Balance>, 
+    exp: Option<String>
+  );
   // Payment
   fn payment(&mut self, job_id: JobId, amount: Balance) -> Promise;
   // View
@@ -171,20 +178,20 @@ impl OutSourcing for Contract {
   }
 
   fn update_job(
-    &mut self, id: JobId, name: String, desc: String, salary: Balance, exp: String  
+    &mut self, 
+    id: JobId, 
+    name: Option<String>, 
+    desc: Option<String>, 
+    salary: Option<Balance>, 
+    exp: Option<String>  
   ) {
     let mut job = self.view_job_by_id(id);
     assert_eq!(job.client.clone(), env::signer_account_id(), "Unauthorized");
     
-    let name = if !name.is_empty() { name } else { job.job_name.clone() };
-    let salary = if salary != 0 { salary } else { job.job_salary.clone() };
-    let desc = if !desc.is_empty() { desc } else { job.job_desc.clone() };
-    let exp = if !exp.is_empty() { exp } else { job.exp.clone() };
-
-    job.job_name = name;
-    job.job_salary = salary;
-    job.job_desc = desc;
-    job.exp = exp;
+    if let Some(name) = name { job.job_name = name }
+    if let Some(salary) = salary { job.job_salary = salary }
+    if let Some(desc) = desc { job.job_desc = desc }
+    if let Some(exp) = exp { job.exp = exp }
 
     self.job_list.insert(&job.job_id, &job);
   }
