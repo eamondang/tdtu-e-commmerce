@@ -12,7 +12,7 @@ pub enum Status {
   Available,
   Taken,
   Expired,
-  Error
+  Done
 }
 // Define the contract structure
 #[near_bindgen]
@@ -71,7 +71,7 @@ pub trait OutSourcing {
   // Update
   fn update_job(&mut self, id: JobId, name: String, desc: String, salary: Balance, exp: String);
   // Payment
-  fn payment(price: Balance) -> Promise;
+  fn payment(&mut self, job_id: JobId, amount: Balance) -> Promise;
   // View
   fn view_all_jobs(&self) -> Vec<Job>;
   fn view_job_by_id(&self, id: JobId) -> Job;
@@ -122,7 +122,7 @@ impl OutSourcing for Contract {
     if env::account_balance() / 10u128.pow(24) < salary {
       panic!("Not enough money");
     }
-    
+
     let job = Job {
       job_id: self.total_job.clone(),
       job_name: name.clone(), 
@@ -197,10 +197,19 @@ impl OutSourcing for Contract {
     self.job_list.get(&id).expect("There is no job")
   }
   
-  fn payment(price: Balance) -> Promise {
+  #[payable]
+  fn payment(&mut self, job_id: JobId, amount: Balance) -> Promise {
+    let mut job = self.view_job_by_id(job_id);
+
     // Assert!
     // Price == env::attached_deposit();
-    Promise::new("eamondev.testnet".parse().unwrap()).transfer(price)
+    assert_eq!(amount, env::attached_deposit() / 10u128.pow(24), "Not enough money");
+    assert_eq!(job.job_salary, amount, "Not correct amount");
+    
+    job.status = Status::Done;
+    self.job_list.insert(&job_id.clone(), &job);
+
+    Promise::new(env::signer_account_id()).transfer(amount)
   }
 
   fn view_all_users(&self) -> Vec<User> {
