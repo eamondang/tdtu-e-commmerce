@@ -47,21 +47,38 @@ pub trait OutSourcing {
     // cargo make call-self new
     // cargo make call new --account-id nnhoang.testnet
     
-    // cargo make call register_executor '{"name": "Duy"}' --account-id dev-1689661765099-19566568641461
-    // Đăng ký làm freelancer.
-    fn register_executor(&mut self, name: String) -> InfoPerson;
+    // View
+    // cargo make view view_all_jobs
+    fn view_all_jobs(&self) -> Vec<Job>;
+
+    // cargo make view view_job_by_id '{"id": "bc"}'
+    fn view_job_by_id(&self, id: String) -> Job;
 
     // Xem tất cả người làm freelancer
     // cargo make view view_all_executors
     fn view_all_executors(&self) -> Vec<InfoPerson>;
 
+    // Xem tất cả người giao việc
+    // cargo make view view_all_clients
+    fn view_all_clients(&self) -> Vec<InfoPerson>;
+
+    // cargo make view executor_by_id --account-id nnhoang.testnet
+    fn executor_by_id(&self) -> InfoPerson;
+
+    // cargo make view client_by_id --account-id nnhoang.testnet
+    fn client_by_id(&self) -> InfoPerson;
+
+
+    // Register
+    // cargo make call register_executor '{"name": "Duy"}' --account-id dev-1689661765099-19566568641461
+    // Đăng ký làm freelancer.
+    fn register_executor(&mut self, name: String) -> InfoPerson;
+
     // Đăng ký để làm người giao job.
     // cargo make call register_client '{"name": "Hoang"}' --account-id nnhoang.testnet
     fn register_client(&mut self, name: String) -> InfoPerson;
 
-    // Xem tất cả người giao việc
-    // cargo make view view_all_clients
-    fn view_all_clients(&self) -> Vec<InfoPerson>;
+    
 
     // Client -> Tạo Jobs
     // cargo make call create_job '{"id": "bc", "title": "smartcontract", "desc": "Lap trinh smartcontract", "wage": 2}' --account-id nnhoang.testnet
@@ -75,10 +92,6 @@ pub trait OutSourcing {
     // cargo make call finish_job '{"id": "bc"}' --account-id nnhoangg.testnet
     fn finish_job(&mut self, id: String)-> Job;
 
-    // Client confirm finished job
-    // cargo make call check_finish_job '{"id": "bc"}' --account-id nnhoang.testnet --amount 2
-    // fn check_finish_job(&mut self, id: String);
-
     // Update
     // cargo make call update_job_for_client '{"id": "bc", "title": "Maketing", "desc": "Digital Maketing", "wage": 2}' --account-id nnhoang.testnet
     fn update_job_for_client(
@@ -89,21 +102,16 @@ pub trait OutSourcing {
         wage: Balance,
     ) -> Job;
 
+
+
     // Payment
     // cargo make call payment '{"id": "bc"}' --account-id nnhoang.testnet --amount 2
     fn payment(&mut self, id: String) -> Promise;
     // fn payment(&self, j: Job) -> Promise;
 
-    // View
-    // cargo make view view_all_jobs
-    fn view_all_jobs(&self) -> Vec<Job>;
-    // cargo make view view_job_by_id '{"id": "bc"}'
-    fn view_job_by_id(&self, id: String) -> Job;
+    
 
-    // cargo make view executor_by_id --account-id nnhoang.testnet
-    fn executor_by_id(&self) -> InfoPerson;
-    // cargo make view client_by_id --account-id nnhoang.testnet
-    fn client_by_id(&self) -> InfoPerson;
+    
 }
 
 // Nhớ là phân insert,
