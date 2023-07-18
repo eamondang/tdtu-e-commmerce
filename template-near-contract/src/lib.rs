@@ -78,7 +78,7 @@ pub trait OutSourcing {
     // cargo make call register_client '{"name": "Hoang"}' --account-id nnhoang.testnet
     fn register_client(&mut self, name: String) -> InfoPerson;
 
-    
+
 
     // Client -> Tạo Jobs
     // cargo make call create_job '{"id": "bc", "title": "smartcontract", "desc": "Lap trinh smartcontract", "wage": 2}' --account-id nnhoang.testnet
@@ -108,13 +108,7 @@ pub trait OutSourcing {
     // cargo make call payment '{"id": "bc"}' --account-id nnhoang.testnet --amount 2
     fn payment(&mut self, id: String) -> Promise;
     // fn payment(&self, j: Job) -> Promise;
-
-    
-
-    
 }
-
-// Nhớ là phân insert,
 
 // Implement the contract structure
 #[near_bindgen]
