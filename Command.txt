@@ -1,0 +1,59 @@
+-- NEW SMARTCONTRACT --
+cargo make call-self new
+
+
+
+-- VIEW ALL --
+_ View Executor by id
+cargo make view executor_by_id --account-id nnhoang.testnet
+
+_ View Client by id
+cargo make view client_by_id --account-id nnhoang.testnet
+
+_ View Job by id
+
+
+
+
+-- VIEW BY ID --
+cargo make view view_job_by_id '{"id": "bc"}'
+_ View all Executor
+cargo make view view_all_executors
+
+_ View all Clients
+cargo make view view_all_clients
+
+_ View all Executors
+cargo make view view_all_executors
+
+_ View all Job
+cargo make view view_all_jobs
+
+
+
+
+-- RESGISTER --
+_ Register Executor
+cargo make call register_executor '{"name": "Duy"}' --account-id dev-1689661765099-19566568641461
+
+_ Register Client
+cargo make call register_client '{"name": "Hoang"}' --account-id nnhoang.testnet
+
+
+
+
+-- JOB --
+_ Tạo Job
+cargo make call create_job '{"id": "bc", "title": "smartcontract", "desc": "Lap trinh smartcontract", "wage": 2}' --account-id nnhoang.testnet
+
+_ Freelancer take Job
+cargo make call take_job '{"id": "bc"}' --account-id nnhoangg.testnet
+
+_ Freelancer confirms Job finished
+cargo make call finish_job '{"id": "bc"}' --account-id nnhoangg.testnet
+
+_ Update Job
+cargo make call update_job_for_client '{"id": "bc", "title": "Maketing", "desc": "Digital Maketing", "wage": 2}' --account-id nnhoang.testnet
+
+_ Client confirms job completion and pays
+cargo make call payment '{"id": "bc"}' --account-id nnhoang.testnet --amount 2

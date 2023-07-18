@@ -1,0 +1,12 @@
+E:\00.BLOCKCHAIN\e-commmerce-smartcontract\template-near-contract\target\debug\deps\semver-cc7a5a56c577fde7.rmeta: C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\lib.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\backport.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\display.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\error.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\eval.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\identifier.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\impls.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\parse.rs
+
+E:\00.BLOCKCHAIN\e-commmerce-smartcontract\template-near-contract\target\debug\deps\semver-cc7a5a56c577fde7.d: C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\lib.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\backport.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\display.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\error.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\eval.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\identifier.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\impls.rs C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\parse.rs
+
+C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\lib.rs:
+C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\backport.rs:
+C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\display.rs:
+C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\error.rs:
+C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\eval.rs:
+C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\identifier.rs:
+C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\impls.rs:
+C:\Users\hoang\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.17\src\parse.rs:
