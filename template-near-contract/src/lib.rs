@@ -43,14 +43,16 @@ pub struct Job {
 }
 
 pub trait OutSourcing {
-    // dev-1689661765099-19566568641461
+    // dev-1689696616559-87418668608154
     // cargo make call-self new
     // cargo make call new --account-id nnhoang.testnet
-    
+
     // View
+    // Xem tất cả Job
     // cargo make view view_all_jobs
     fn view_all_jobs(&self) -> Vec<Job>;
 
+    // Xem Job bằng id
     // cargo make view view_job_by_id '{"id": "bc"}'
     fn view_job_by_id(&self, id: String) -> Job;
 
@@ -68,9 +70,8 @@ pub trait OutSourcing {
     // cargo make view client_by_id --account-id nnhoang.testnet
     fn client_by_id(&self) -> InfoPerson;
 
-
     // Register
-    // cargo make call register_executor '{"name": "Duy"}' --account-id dev-1689661765099-19566568641461
+    // cargo make call register_executor '{"name": "Duy"}' --account-id dev-1689696616559-87418668608154
     // Đăng ký làm freelancer.
     fn register_executor(&mut self, name: String) -> InfoPerson;
 
@@ -78,19 +79,17 @@ pub trait OutSourcing {
     // cargo make call register_client '{"name": "Hoang"}' --account-id nnhoang.testnet
     fn register_client(&mut self, name: String) -> InfoPerson;
 
-
-
     // Client -> Tạo Jobs
     // cargo make call create_job '{"id": "bc", "title": "smartcontract", "desc": "Lap trinh smartcontract", "wage": 2}' --account-id nnhoang.testnet
     fn create_job(&mut self, id: String, title: String, desc: String, wage: Balance) -> Job;
 
     // Freelancer -> Take.
     // cargo make call take_job '{"id": "bc"}' --account-id nnhoangg.testnet
-    fn take_job(&mut self, id: String) -> Job ;
+    fn take_job(&mut self, id: String) -> Job;
 
     // Executor finished job
     // cargo make call finish_job '{"id": "bc"}' --account-id nnhoangg.testnet
-    fn finish_job(&mut self, id: String)-> Job;
+    fn finish_job(&mut self, id: String) -> Job;
 
     // Update
     // cargo make call update_job_for_client '{"id": "bc", "title": "Maketing", "desc": "Digital Maketing", "wage": 2}' --account-id nnhoang.testnet
@@ -101,8 +100,6 @@ pub trait OutSourcing {
         desc: String,
         wage: Balance,
     ) -> Job;
-
-
 
     // Payment
     // cargo make call payment '{"id": "bc"}' --account-id nnhoang.testnet --amount 2
@@ -186,15 +183,21 @@ impl OutSourcing for Contract {
         };
         self.client_by_id.insert(&owner, &client);
         self.clients.insert(&owner, &client);
-        
+
         client
     }
 
     // Job
     fn create_job(&mut self, id: String, title: String, desc: String, wage: Balance) -> Job {
         let owner = env::signer_account_id();
-        assert!(self.client_by_id.contains_key(&owner), "Had an client");
-        assert!(!self.job_by_id.contains_key(&id), "Had an job");
+        assert!(
+            self.client_by_id.contains_key(&owner),
+            "This Client hasn't been created yet"
+        );
+        assert!(
+            !self.job_by_id.contains_key(&id),
+            "This job has been created "
+        );
         let job = Job {
             id: id.clone(),
             title,
@@ -215,7 +218,7 @@ impl OutSourcing for Contract {
 
         if let Some(mut j) = self.job_by_id.get(&id) {
             if owner.clone() == j.owner {
-                panic!("You are client");
+                panic!("You are Client");
             }
 
             if j.check_take == true {
@@ -225,7 +228,7 @@ impl OutSourcing for Contract {
                 j.executor_id = owner;
                 self.job_by_id.insert(&id, &j);
                 self.jobs.insert(&id, &j);
-                return j
+                return j;
             }
         } else {
             panic!("There is no {} job", id);
@@ -235,16 +238,16 @@ impl OutSourcing for Contract {
         let owner = env::signer_account_id();
 
         if let Some(mut j) = self.job_by_id.get(&id) {
-            if j.executor_id != owner {
-                panic!("Not your job");
+            if j.executor_id != owner || owner == j.owner {
+                panic!("This job isn't yours");
             } else {
                 j.check_finish = true;
                 self.job_by_id.insert(&id, &j);
                 self.jobs.insert(&id, &j);
-                return j
+                return j;
             }
         } else {
-            panic!("There is no {} job", id);
+            panic!("There is no this job");
         }
     }
     fn update_job_for_client(
