@@ -1,0 +1,12 @@
+D:\tdtu-e-commmerce\template-near-contract\target\debug\deps\zeropool_bn-793e69c97277a839.rmeta: C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\lib.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\arith.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\mod.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fp.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fq12.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fq2.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fq6.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\groups\mod.rs
+
+D:\tdtu-e-commmerce\template-near-contract\target\debug\deps\zeropool_bn-793e69c97277a839.d: C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\lib.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\arith.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\mod.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fp.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fq12.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fq2.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fq6.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\groups\mod.rs
+
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\lib.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\arith.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\mod.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fp.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fq12.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fq2.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\fields\fq6.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\zeropool-bn-0.5.11\src\groups\mod.rs:

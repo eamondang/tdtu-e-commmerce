@@ -1,0 +1,12 @@
+D:\tdtu-e-commmerce\template-near-contract\target\debug\deps\thiserror_impl-526ce8ed733744c9.dll: C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\lib.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\ast.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\attr.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\expand.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\fmt.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\generics.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\prop.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\valid.rs
+
+D:\tdtu-e-commmerce\template-near-contract\target\debug\deps\thiserror_impl-526ce8ed733744c9.d: C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\lib.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\ast.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\attr.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\expand.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\fmt.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\generics.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\prop.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\valid.rs
+
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\lib.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\ast.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\attr.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\expand.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\fmt.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\generics.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\prop.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.40\src\valid.rs:

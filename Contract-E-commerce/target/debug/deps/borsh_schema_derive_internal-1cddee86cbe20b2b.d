@@ -1,0 +1,10 @@
+D:\tdtu-e-commmerce\Contract-E-commerce\target\debug\deps\borsh_schema_derive_internal-1cddee86cbe20b2b.rmeta: C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\lib.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\helpers.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\enum_schema.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\struct_schema.rs
+
+D:\tdtu-e-commmerce\Contract-E-commerce\target\debug\deps\libborsh_schema_derive_internal-1cddee86cbe20b2b.rlib: C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\lib.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\helpers.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\enum_schema.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\struct_schema.rs
+
+D:\tdtu-e-commmerce\Contract-E-commerce\target\debug\deps\borsh_schema_derive_internal-1cddee86cbe20b2b.d: C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\lib.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\helpers.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\enum_schema.rs C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\struct_schema.rs
+
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\lib.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\helpers.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\enum_schema.rs:
+C:\Users\kiett\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-schema-derive-internal-0.9.3\src\struct_schema.rs:
