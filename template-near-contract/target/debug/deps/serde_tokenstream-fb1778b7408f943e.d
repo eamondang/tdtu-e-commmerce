@@ -1,0 +1,10 @@
+/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/template-near-contract/target/debug/deps/serde_tokenstream-fb1778b7408f943e.rmeta: /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/lib.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/ibidem.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/ordered_map.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/serde_tokenstream.rs
+
+/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/template-near-contract/target/debug/deps/libserde_tokenstream-fb1778b7408f943e.rlib: /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/lib.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/ibidem.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/ordered_map.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/serde_tokenstream.rs
+
+/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/template-near-contract/target/debug/deps/serde_tokenstream-fb1778b7408f943e.d: /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/lib.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/ibidem.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/ordered_map.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/serde_tokenstream.rs
+
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/lib.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/ibidem.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/ordered_map.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_tokenstream-0.1.7/src/serde_tokenstream.rs:

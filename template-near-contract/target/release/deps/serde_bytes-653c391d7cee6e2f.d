@@ -1,0 +1,11 @@
+/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/template-near-contract/target/release/deps/serde_bytes-653c391d7cee6e2f.rmeta: /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/lib.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/bytes.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/de.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/ser.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/bytebuf.rs
+
+/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/template-near-contract/target/release/deps/libserde_bytes-653c391d7cee6e2f.rlib: /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/lib.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/bytes.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/de.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/ser.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/bytebuf.rs
+
+/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/template-near-contract/target/release/deps/serde_bytes-653c391d7cee6e2f.d: /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/lib.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/bytes.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/de.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/ser.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/bytebuf.rs
+
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/lib.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/bytes.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/de.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/ser.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_bytes-0.11.12/src/bytebuf.rs:

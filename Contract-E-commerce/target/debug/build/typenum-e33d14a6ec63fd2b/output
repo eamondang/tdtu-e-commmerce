@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/Contract-E-commerce/target/debug/build/typenum-e33d14a6ec63fd2b/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/Contract-E-commerce/target/debug/build/typenum-e33d14a6ec63fd2b/out/op.rs

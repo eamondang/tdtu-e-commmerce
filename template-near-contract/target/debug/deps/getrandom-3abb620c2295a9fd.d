@@ -1,0 +1,11 @@
+/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/template-near-contract/target/debug/deps/getrandom-3abb620c2295a9fd.rmeta: /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/lib.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/error.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/util.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/error_impls.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/util_libc.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/use_file.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/linux_android.rs
+
+/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/template-near-contract/target/debug/deps/getrandom-3abb620c2295a9fd.d: /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/lib.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/error.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/util.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/error_impls.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/util_libc.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/use_file.rs /home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/linux_android.rs
+
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/lib.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/error.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/util.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/error_impls.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/util_libc.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/use_file.rs:
+/home/duclh/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/linux_android.rs:

@@ -1,0 +1,1 @@
+/mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/template-near-contract/target/wasm32-unknown-unknown/release/template_near_contract.wasm: /mnt/e/VBI-Blockchain/TDTU-Rust-Bootcamp/Projects/Ex7/tdtu-e-commmerce/template-near-contract/src/lib.rs
