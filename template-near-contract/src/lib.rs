@@ -8,7 +8,7 @@ pub type FreeLancerId = AccountId;
 pub type ClientId = AccountId;
 pub type JobId = String;
 
-#[derive(Deserialize, BorshDeserialize, BorshSerialize, Serialize)]
+#[derive(Deserialize, BorshDeserialize, BorshSerialize, Serialize, PartialEq)]
 #[serde(crate = "near_sdk::serde")]
 pub enum Status {
     #[serde(rename = "open")]
@@ -30,18 +30,24 @@ pub trait OutSourcing {
     fn take_job(&mut self, job_id: JobId) -> Job;
     // Update
     fn update_job(&mut self, job_id: JobId, title: Option<String>, desc: Option<String>, budget: Option<Balance>, tags: Option<Vec<String>>, duration: Option<u64>) -> Job;
+
+    // Cancel job
+    fn remove_job(&mut self, job_id: JobId) -> Job;
+
     // Payment
-    
     fn payment(&mut self, price: Balance) -> Promise;
+    
     // View
     fn view_all_jobs(&self) -> Vec<Job>;
     fn view_job_by_id(&self, job_id: JobId) -> Job;
 
     fn view_freelancer_by_id(&self) -> FreeLancer;
+
+    fn index_of_job(&self, job_id: JobId) -> u128;
 }
 
 
-#[derive(BorshDeserialize, BorshSerialize, Deserialize, Serialize)]
+#[derive(BorshDeserialize, BorshSerialize, Deserialize, Serialize, PartialEq)]
 #[serde(crate = "near_sdk::serde")]
 pub struct Job {
     pub job_id: JobId,
@@ -169,7 +175,7 @@ impl OutSourcing for Contract {
         new_job
     }
     fn take_job(&mut self, job_id: JobId) -> Job {
-        assert!(self.job_by_id.contains_key(&job_id), "This job doesn't exist");
+        // assert!(self.job_by_id.contains_key(&job_id), "This job doesn't exist");
 
         let id = env::signer_account_id();
 
@@ -177,6 +183,8 @@ impl OutSourcing for Contract {
 
         // let mut job = self.job_by_id.get(&job_id).unwrap();
         let mut job = self.view_job_by_id(job_id.clone());
+
+        assert!(job.status == Status::Open, "This job has already been taken by other Freelancer");
         job.executor = Some(id.clone());
         job.status = Status::InProgress;
 
@@ -186,7 +194,7 @@ impl OutSourcing for Contract {
         job
     }
     fn update_job(&mut self, job_id: JobId, title: Option<String>, desc: Option<String>, budget: Option<Balance>, tags: Option<Vec<String>>, duration: Option<u64>) -> Job {
-        assert!(self.job_by_id.contains_key(&job_id), "This job doesn't exist");
+        // assert!(self.job_by_id.contains_key(&job_id), "This job doesn't exist");
 
         let mut job = self.view_job_by_id(job_id.clone());
         
@@ -211,6 +219,23 @@ impl OutSourcing for Contract {
         self.jobs_by_owner.insert(&job.author, &job);
         job
     }
+
+    fn remove_job(&mut self, job_id: JobId) -> Job {
+        let job = self.view_job_by_id(job_id.clone());
+        
+        // assert!(self.job_by_id.contains_key(&job_id), "This job doesn't exist");
+        assert_eq!(env::signer_account_id(), job.author, "You don't have authorization");
+        
+        self.job_by_id.remove(&job_id);
+        self.jobs_by_owner.remove(&job.author);
+    
+        self.all_jobs.remove(&(self.index_of_job(job_id)));
+        
+        self.total_jobs -= 1;
+        job
+    }
+
+
     fn view_all_jobs(&self) -> Vec<Job> {
         let mut jobs = Vec::new();
         
@@ -223,6 +248,7 @@ impl OutSourcing for Contract {
         jobs
     }
     fn view_job_by_id(&self, job_id: JobId) -> Job {
+        assert!(self.job_by_id.contains_key(&job_id), "This job doesn't exist");
         self.job_by_id.get(&job_id).unwrap()
     }
     #[payable]
@@ -239,6 +265,15 @@ impl OutSourcing for Contract {
     fn view_freelancer_by_id(&self) -> FreeLancer {
         let id = env::signer_account_id();
         self.freelancer_by_id.get(&id).unwrap()
+    }
+
+    fn index_of_job(&self, job_id: JobId) -> u128 {
+        for (i, j) in &self.all_jobs {
+            if j.job_id == job_id {
+                return i;
+            }
+        }
+        0
     }
 }
 

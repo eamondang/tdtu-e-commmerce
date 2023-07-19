@@ -13,6 +13,7 @@
 . Create job 
     cargo make call create_job '{"title": "Ticket Buying System", "desc": "Developing a Ticket Buying Platform ...", "budget": 5, "tags": ["ExpressJs","ReactJs","MongoDB"], "duration": 30}' --account-id nkeyskuo124.testnet
     cargo make call create_job '{"title": "Food Ordering System", "desc": "Build an Ordering System for restaurants", "budget": 20, "tags": ["PHP","VueJs","MySQL"], "duration": 20}' --account-id nkeyskuo124.testnet
+    cargo make call create_job '{"title": "Social Communication System", "desc": "...", "budget": 10, "tags": ["GoLang","VueJs","MySQL", "GraphQL"], "duration": 30}' --account-id nkeyskuo124.testnet
 
 . Take job
     cargo make call take_job '{"job_id": "J-1689271438776764125"}' --account-id nkeyskuo124.testnet
@@ -23,8 +24,12 @@
 . Update job 
     cargo make call update_job '{"job_id": "J-1689271438776764125", "budget": 4}' --account-id nkeyskuo124.testnet
     cargo make call update_job '{"job_id": "J-1689289254227678863", "duration": 15}' --account-id nkeyskuo124.testnet
+    
+. Remove job 
+    cargo make call remove_job '{"job_id": "J-1689289254227678863"}' --account-id nkeyskuo124.testnet
+
 . View all jobs
-    cargo make call view_all_jobs '{}' --account-id nkeyskuo124.testnet
+    cargo make view view_all_jobs
 
     Result:
         [
@@ -53,6 +58,7 @@
                 status: 'open'
             }
         ]
+
 . View Freelancer 
     cargo make call view_freelancer_by_id --account-id nkeyskuo124.testnet
 
