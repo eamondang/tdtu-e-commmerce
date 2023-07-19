@@ -1,1 +1,0 @@
-/home/hoangnguyen/Near/tdtu-e-commmerce/template-near-contract/target/wasm32-unknown-unknown/release/template_near_contract.wasm: /home/hoangnguyen/Near/tdtu-e-commmerce/template-near-contract/src/events.rs /home/hoangnguyen/Near/tdtu-e-commmerce/template-near-contract/src/lib.rs
