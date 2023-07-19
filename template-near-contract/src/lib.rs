@@ -43,7 +43,7 @@ pub struct Job {
 }
 
 pub trait OutSourcing {
-    // dev-1689696616559-87418668608154
+    // dev-1689738688456-44925662072727
     // cargo make call-self new
     // cargo make call new --account-id nnhoang.testnet
 
@@ -71,7 +71,7 @@ pub trait OutSourcing {
     fn client_by_id(&self) -> InfoPerson;
 
     // Register
-    // cargo make call register_executor '{"name": "Duy"}' --account-id dev-1689696616559-87418668608154
+    // cargo make call register_executor '{"name": "Duy"}' --account-id dev-1689738688456-44925662072727
     // Đăng ký làm freelancer.
     fn register_executor(&mut self, name: String) -> InfoPerson;
 
@@ -116,11 +116,13 @@ impl OutSourcing for Contract {
 
         self.clients.get(&owner).unwrap()
     }
+
     fn executor_by_id(&self) -> InfoPerson {
         let owner = env::signer_account_id();
 
         self.exercutors.get(&owner).unwrap()
     }
+
     fn view_all_executors(&self) -> Vec<InfoPerson> {
         let mut exe = Vec::new();
 
@@ -130,6 +132,7 @@ impl OutSourcing for Contract {
 
         exe
     }
+
     fn view_all_clients(&self) -> Vec<InfoPerson> {
         let mut client = Vec::new();
 
@@ -139,6 +142,7 @@ impl OutSourcing for Contract {
 
         client
     }
+
     fn view_all_jobs(&self) -> Vec<Job> {
         let mut job = Vec::new();
 
@@ -147,6 +151,7 @@ impl OutSourcing for Contract {
         }
         job
     }
+
     fn view_job_by_id(&self, id: String) -> Job {
         if let Some(j) = self.job_by_id.get(&id) {
             j
@@ -154,6 +159,8 @@ impl OutSourcing for Contract {
             panic!("This job doesn't exist");
         }
     }
+
+
 
     // Register
     fn register_executor(&mut self, name: String) -> InfoPerson {
@@ -172,6 +179,7 @@ impl OutSourcing for Contract {
 
         executor
     }
+
     fn register_client(&mut self, name: String) -> InfoPerson {
         let owner = env::signer_account_id();
 
@@ -187,17 +195,13 @@ impl OutSourcing for Contract {
         client
     }
 
+
+
     // Job
     fn create_job(&mut self, id: String, title: String, desc: String, wage: Balance) -> Job {
         let owner = env::signer_account_id();
-        assert!(
-            self.client_by_id.contains_key(&owner),
-            "This Client hasn't been created yet"
-        );
-        assert!(
-            !self.job_by_id.contains_key(&id),
-            "This job has been created "
-        );
+        assert!(self.client_by_id.contains_key(&owner), "This Client hasn't been created yet");
+        assert!(!self.job_by_id.contains_key(&id), "This job has been created ");
         let job = Job {
             id: id.clone(),
             title,
@@ -213,6 +217,7 @@ impl OutSourcing for Contract {
 
         job
     }
+
     fn take_job(&mut self, id: String) -> Job {
         let owner = env::signer_account_id();
 
@@ -234,6 +239,7 @@ impl OutSourcing for Contract {
             panic!("There is no {} job", id);
         }
     }
+
     fn finish_job(&mut self, id: String) -> Job {
         let owner = env::signer_account_id();
 
@@ -250,6 +256,7 @@ impl OutSourcing for Contract {
             panic!("There is no this job");
         }
     }
+
     fn update_job_for_client(
         &mut self,
         id: String,
@@ -281,6 +288,8 @@ impl OutSourcing for Contract {
 
         job
     }
+
+
 
     // Payment
     #[payable]

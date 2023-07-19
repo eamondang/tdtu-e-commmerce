@@ -10,12 +10,10 @@ cargo make view executor_by_id --account-id nnhoang.testnet
 _ View Client by id
 cargo make view client_by_id --account-id nnhoang.testnet
 
-_ View Job by id
-
-
 
 
 -- VIEW BY ID --
+_ View Job by id
 cargo make view view_job_by_id '{"id": "bc"}'
 _ View all Executor
 cargo make view view_all_executors
@@ -55,5 +53,5 @@ cargo make call finish_job '{"id": "bc"}' --account-id nnhoangg.testnet
 _ Update Job
 cargo make call update_job_for_client '{"id": "bc", "title": "Maketing", "desc": "Digital Maketing", "wage": 2}' --account-id nnhoang.testnet
 
-_ Client confirms job completion and pays
+_ Client confirms job completion and payment
 cargo make call payment '{"id": "bc"}' --account-id nnhoang.testnet --amount 2
