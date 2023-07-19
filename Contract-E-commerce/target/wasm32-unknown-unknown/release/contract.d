@@ -1,0 +1,1 @@
+/Users/macos/Desktop/\ Benny/Tech\ stuff/BLOCKCHAIN/tdtu-e-commmerce/Contract-E-commerce/target/wasm32-unknown-unknown/release/contract.wasm: /Users/macos/Desktop/\ Benny/Tech\ stuff/BLOCKCHAIN/tdtu-e-commmerce/Contract-E-commerce/src/lib.rs

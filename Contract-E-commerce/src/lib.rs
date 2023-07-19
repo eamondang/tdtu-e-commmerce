@@ -1,7 +1,7 @@
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
-use near_sdk::collections::{LookupMap, UnorderedMap, UnorderedSet};
+use near_sdk::collections::{LookupMap, UnorderedMap};
 use near_sdk::serde::{Deserialize, Serialize};
-use near_sdk::{env, near_bindgen, AccountId, Balance, CryptoHash, PanicOnDefault};
+use near_sdk::{env, near_bindgen, AccountId, Balance, PanicOnDefault};
 
 pub type ProductId = String;
 
