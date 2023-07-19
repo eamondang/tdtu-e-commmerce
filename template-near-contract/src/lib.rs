@@ -44,6 +44,7 @@ pub trait OutSourcing {
     fn view_freelancer_by_id(&self) -> FreeLancer;
 
     fn index_of_job(&self, job_id: JobId) -> u128;
+    fn clear_jobs(&mut self) -> String;
 }
 
 
@@ -229,8 +230,16 @@ impl OutSourcing for Contract {
         self.job_by_id.remove(&job_id);
         self.jobs_by_owner.remove(&job.author);
     
-        self.all_jobs.remove(&(self.index_of_job(job_id)));
-        
+        // self.all_jobs.remove(&(self.index_of_job(job_id)));
+        let length: u128 = self.all_jobs.len() as u128; 
+        for i in self.index_of_job(job_id)..length {
+            if let Some(next_job) = self.all_jobs.get(&(i + 1)) {
+                self.all_jobs.insert(&i, &next_job);
+            }
+            
+        }
+
+        self.all_jobs.remove(&(length));
         self.total_jobs -= 1;
         job
     }
@@ -274,6 +283,17 @@ impl OutSourcing for Contract {
             }
         }
         0
+    }
+
+    fn clear_jobs(&mut self) -> String {
+        assert_eq!(self.owner, env::signer_account_id(), "You are not owner");
+        self.all_jobs.clear();
+        self.job_by_id = LookupMap::new(b"job by id".try_to_vec().unwrap());
+        self.jobs_by_executor = LookupMap::new(b"jobs by executor".try_to_vec().unwrap());
+        self.jobs_by_owner = LookupMap::new(b"jobs by owner".try_to_vec().unwrap());
+        self.total_jobs =  0;
+        
+        return String::from("Cleared Data");
     }
 }
 

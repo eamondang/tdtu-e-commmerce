@@ -59,9 +59,13 @@
             }
         ]
 
+. Clear Jobs 
+    cargo make call clear_jobs '{}' --account-id nkeyskuo124.testnet
+
 . View Freelancer 
     cargo make call view_freelancer_by_id --account-id nkeyskuo124.testnet
 
 . Payment 
     cargo make call payment '{"price": 1}' --account-id nkeyskuo124.testnet --amount 1
     cargo make call payment '{"price": 2}' --account-id dev-1689246629823-97048943405890 --amount 1
+
