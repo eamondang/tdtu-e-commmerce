@@ -17,6 +17,9 @@ cargo make call-self init
 ```
 cargo make call create_job '{"min_salary": 500, "max_salary": 1000, "number_job_vacancies": 10, "company_address": "HCM", "jd": "Blockchain Dev"}' --account-id thanhtung2410.testnet
 ```
+```
+cargo make call create_job '{"min_salary": 900, "max_salary": 1800, "number_job_vacancies": 3, "company_address": "HN", "jd": "Solidity"}' --account-id thanhtung2410.testnet
+```
 
 ## view all jobs
 ```
@@ -62,4 +65,9 @@ cargo make call take_job '{"id": 1}' --account-id thanhtung2410.testnet
 ## view all job taken
 ```
 cargo make view view_all_jobs_taken
+```
+
+## payment
+```
+cargo make call payment '{"price": 1, "id": 2}' --account-id thanhtung2410.testnet --amount 1
 ```

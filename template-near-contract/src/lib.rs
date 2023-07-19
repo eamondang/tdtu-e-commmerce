@@ -96,7 +96,7 @@ pub trait OutSourcing {
     ) -> Job;
 
     // Payment
-    fn payment(price: Balance) -> Promise;
+    fn payment(&mut self, price: Balance, id: JobId) -> Promise;
 
     // View
     fn view_all_jobs(&self) -> Vec<Job>;
@@ -177,7 +177,7 @@ impl OutSourcing for Contract {
             company,
             phone,
         };
-        
+
         self.client_by_id.insert(&client_id, &client);
         self.all_clients
             .insert(&(self.total_clients as u128), &client);
@@ -215,7 +215,7 @@ impl OutSourcing for Contract {
             client_id: env::signer_account_id(),
         };
         let client_id = env::signer_account_id();
-        
+
         let mut jobs_set: Vec<Job> = self
             .jobs_per_client
             .get(&client_id)
@@ -226,11 +226,11 @@ impl OutSourcing for Contract {
         self.job_by_id.insert(&(job_id as u128), &job);
         self.all_jobs.insert(&(job_id as u128), &job);
     }
-    
+
     fn take_job(&mut self, id: JobId) {
         let mut job = self.view_job_by_id(id);
         job.number_job_vacancies -= 1;
-        
+
         self.all_jobs.insert(&job.id, &job);
         self.job_by_id.insert(&job.id, &job);
 
@@ -261,10 +261,10 @@ impl OutSourcing for Contract {
         job_found.number_job_vacancies = number_job_vacancies;
         job_found.company_address = company_address;
         job_found.jd = jd;
-        
+
         self.job_by_id.insert(&(id as u128), &job_found);
         self.all_jobs.insert(&(id as u128), &job_found);
-        
+
         job_found
     }
 
@@ -280,8 +280,15 @@ impl OutSourcing for Contract {
         self.all_jobs.get(&id).unwrap()
     }
 
-    fn payment(price: Balance) -> Promise {
-        // assert!(price == env::attached_deposit());
-        Promise::new("eamondev.testnet".parse().unwrap()).transfer(price)
+    #[payable]
+    fn payment(&mut self, price: Balance, id: JobId) -> Promise {
+        assert!(
+            price == env::attached_deposit() / 10u128.pow(24),
+            "Not enough money to take job"
+        );
+        let job_found = self.view_job_by_id(id);
+        assert!(job_found.number_job_vacancies > 0, "This job is full slot");
+        self.take_job(id);
+        Promise::new(env::signer_account_id()).transfer(price)
     }
 }
